@@ -6,7 +6,8 @@ body {
   align-items: center;
   justify-content: center;
   background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
-  min-height: 95vh;
+  min-height: 100vh;
+  overflow: hidden;
 }
 .card {
   display: flex;
@@ -54,6 +55,9 @@ input::placeholder {
   font-weight: 700;
   font-size: 12px;
 }
+input:focus {
+  outline: none;
+}
 .arrow {
   border-radius: 20px;
   background-color: hsl(0, 36%, 70%);
@@ -64,8 +68,19 @@ input::placeholder {
   padding-inline-start: 30px;
   margin: 20px;
 }
+.arrow:hover {
+  opacity: 0.8;
+}
+small {
+  position: absolute;
+  top: 80%;
+  left: 10%;
+  color: hsl(0, 93%, 68%);
+  visibility: hidden;
+}
 .input {
   display: flex;
+  position: relative;
 }
 .mobile {
   display: none;
